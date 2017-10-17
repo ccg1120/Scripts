@@ -31,4 +31,46 @@ public class Editor_SceneView : Editor {
 
         Handles.EndGUI();
     }
+
+    private static string[] TagSetting = new string[2] { "Destination", "Event" };
+    private static bool[] tagSet = new bool[2];
+    private static int tagCount = 0;
+
+    public void CreateTag()
+    {
+        //태그를 검사하고 생성하는 코드 
+        SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
+        SerializedProperty tagsProp = tagManager.FindProperty("tags");
+
+
+        //검출용으로 사용할 태그에 대해 검사 및 설정
+        for (int index = 0; index < tagsProp.arraySize; index++)
+        {
+            SerializedProperty t = tagsProp.GetArrayElementAtIndex(index);
+            for (int index2 = 0; index2 < TagSetting.Length; index2++)
+            {
+                if (t.stringValue.Equals(TagSetting[index2]))
+                {
+                    tagSet[index2] = true;
+                    tagCount++;
+                    break;
+                }
+            }
+        }
+        //태그생성
+        for (int index = 0; index < TagSetting.Length; index++)
+        {
+            if (!tagSet[index])
+            {
+
+                tagsProp.InsertArrayElementAtIndex(tagCount);
+                SerializedProperty n = tagsProp.GetArrayElementAtIndex(tagCount);
+                n.stringValue = TagSetting[index];
+                //업데이트를 해줘야 보임
+                tagManager.ApplyModifiedProperties();
+                tagManager.Update();
+                tagCount++;
+            }
+        }
+    }
 }
