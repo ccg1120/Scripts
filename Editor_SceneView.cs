@@ -32,6 +32,8 @@ public class Editor_SceneView : Editor {
         Handles.EndGUI();
     }
 
+    //씬 카메라를 해당 오브젝트로 이동할 수 있게 하는 문장
+    // SceneView.lastActiveSceneView.LookAt(destinationManager.DestinationList[selectNum].transform.position);
     private static string[] TagSetting = new string[2] { "Destination", "Event" };
     private static bool[] tagSet = new bool[2];
     private static int tagCount = 0;
