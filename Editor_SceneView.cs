@@ -31,6 +31,7 @@ public class Editor_SceneView : Editor {
 
         Handles.EndGUI();
     }
+   
 
     //씬 카메라를 해당 오브젝트로 이동할 수 있게 하는 문장
     // SceneView.lastActiveSceneView.LookAt(destinationManager.DestinationList[selectNum].transform.position);
@@ -74,5 +75,40 @@ public class Editor_SceneView : Editor {
                 tagCount++;
             }
         }
+        
     }
+
+    public override void OnInspectorGUI()
+    {
+        //using 을 통한 분리된 구역의 칼라 설정
+        using (new BackgroundColorScope(Color.green))
+        {
+            // 緑色のボタン
+            GUILayout.Button("Button");
+
+            using (new BackgroundColorScope(Color.yellow))
+            {
+                // 黄色のボタン
+                GUILayout.Button("Button");
+            }
+        }
+    }
+
+    // 이미지 배경 색상을 바꾸는 클래스 
+    public class BackgroundColorScope : GUI.Scope
+    {
+        private readonly Color color;
+        public BackgroundColorScope(Color color)
+        {
+            this.color = GUI.backgroundColor;
+            GUI.backgroundColor = color;
+        }
+
+
+        protected override void CloseScope()
+        {
+            GUI.backgroundColor = color;
+        }
+    }
+    
 }
