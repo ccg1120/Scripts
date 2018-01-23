@@ -14,6 +14,6 @@ github 100mb 이상 파일 올릴 때
 <img src="//nas/Share/SKTREADMEI_Image/test.jpg" style="width: 200px;"/>
 
 
-![title](D:/Users/morph/Desktop/test.jpg)
+![title](.Image/test.jpg)
 
 ![](//nas/Share/SKTREADMEI_Image/test.jpg){: width="100px" height="20px"}
