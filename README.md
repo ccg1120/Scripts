@@ -11,9 +11,9 @@ github 100mb 이상 파일 올릴 때
 <https://medium.com/@stargt/github%EC%97%90-100mb-%EC%9D%B4%EC%83%81%EC%9D%98-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EC%98%AC%EB%A6%AC%EB%8A%94-%EB%B0%A9%EB%B2%95-9d9e6e3b94ef>
 
 
-<img src="//nas/Share/SKTREADMEI_Image/test.jpg" style="width: 200px;"/>
+<img src="https://github.com/ccg1120/Scripts/tree/master/Image/test.jpg" style="width: 200px;"/>
 
 
-![title](https://github.com/ccg1120/Scripts/tree/master/Image/test.jpg)
 
-![](/Image/test.jpg){: width="100px" height="20px"}
+
+![title](/Image/test.jpg){: width="100%" height="100%"}
