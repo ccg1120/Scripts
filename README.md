@@ -16,4 +16,4 @@ github 100mb 이상 파일 올릴 때
 
 ![title](https://github.com/ccg1120/Scripts/tree/master/Image/test.jpg)
 
-![](/Image/test.jpg)
+![](/Image/test.jpg){: width="100px" height="20px"}
