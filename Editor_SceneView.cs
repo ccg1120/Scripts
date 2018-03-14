@@ -9,6 +9,9 @@ using UnityEditor;
 
 public class Editor_SceneView : Editor {
 
+    //[MenuItem("Window/Scene GUI/Enable _F12")]  <- F12 is shortcut
+    //[MenuItem("Window/Scene GUI/Enable _%F")]  <- CTRL + F is shortcut
+    //[MenuItem("Window/Scene GUI/Enable _&F")]  <- ALT + F is shortcut
     [MenuItem("Window/Scene GUI/Enable")]
     public static void Enable()
     {
