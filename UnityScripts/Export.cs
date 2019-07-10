@@ -5,18 +5,18 @@ using UnityEditor;
 
 public class Export
 {
-    [MenuItem("T real/Export")]
+    [MenuItem("xx/xxxxxxxx")]
     static void Export()
     {
-        string browserCore = "Assets/BrowserCore";
-        string trealScriptFolder = "Assets/TrealScript";
+        string browserCore = "xxx/xxxxxxxxx";
+        string trealScriptFolder = "xxxxxxxx/xxxxxxxxxxx";
 
         var assets = new string[] { browserCore, trealScriptFolder };
 
-        var export = EditorUtility.DisplayDialog("Export", "Export?", "Export", "Cancel");
+        var export = EditorUtility.DisplayDialog("xxxxxxxx", "xxxxxxx?", "xxxxxxxx", "xxxxxxxxxxx");
         if (export)
         {
-            AssetDatabase.ExportPackage(assets, "Assets/TrealBrowserCore.unitypackage", ExportPackageOptions.Recurse);
+            AssetDatabase.ExportPackage(assets, "xxxxxx/xxxxxxxx.xxxxxxxx", ExportPackageOptions.Recurse);
             Debug.Log("Export Complete");
         }
     }
