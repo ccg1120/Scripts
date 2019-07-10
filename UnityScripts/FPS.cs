@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FPS2 : MonoBehaviour {
+public class FPS : MonoBehaviour {
 
     float deltaTime = 0.0f;
     public GUIText text;
     float msec = 0;
     float fps = 0;
+    
     void Update()
     {
         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
